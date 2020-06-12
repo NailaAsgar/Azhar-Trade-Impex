@@ -1,0 +1,81 @@
+{% extends 'blog/base.html' %}
+
+{%block content%}
+<section class="section pb-5">
+    {% if name %}
+    <br><br><br>
+      <div class="col-lg-12 text-center alert alert-success" role="alert">
+        <h3> Thanks {{name}}!</h3> <hr>
+        <p>We received your email and will get back to you shortly...</p>
+        <br/><br/>
+      </div> 
+    {% else %}
+    <h5>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active">Contact</li>
+      </ol>
+    </h5>
+    
+    <div class = "col-lg-12 row text-center" style="border: 0px; margin: 0px;">
+      <div class="col-md-8">
+        <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height:570px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.643528130614!2d73.22737931437818!3d19.167075054085412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be792d57f0cf301%3A0x69086c2e7d648aae!2sAzhar%20Trade%20Impex!5e0!3m2!1sen!2sin!4v1588241522872!5m2!1sen!2sin"
+            width="600" height="450" frameborder="0" style="border:1px;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+        </div>
+        <br>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+
+          <div class="card-body">
+            <form action="{% url 'blog-contact' %}" method="POST">
+              {% csrf_token %}
+              <!--Header-->
+              <div class="form-header blue accent-1">
+                <h3><i class="fa fa-envelope"></i> Write to us:</h3>
+              </div>
+
+              <!--Body-->
+              <div class="md-form">
+                <label for="form-name">Your name</label>
+                <input type="text" name="name" id="form-name" class="form-control">
+              </div>
+
+              <div class="md-form">
+                <label for="form-email">Your email</label>
+                <input type="email" name="email" id="form-email" class="form-control">
+
+              </div>
+
+              <div class="md-form">
+                <label for="form-Subject">Subject</label>
+                <input type="text" name="subject" id="form-Subject" class="form-control">
+              </div>
+
+              <div class="md-form">
+                <label for="form-Subject">Content</label>
+                <textarea id="form-text" name="content" class="form-control md-textarea" rows="3"></textarea>
+              </div>
+
+              <div class="text-center mt-4">
+                <button class="btn btn-info">Submit</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+
+
+
+  </div>
+
+</section>
+
+{%endblock%}

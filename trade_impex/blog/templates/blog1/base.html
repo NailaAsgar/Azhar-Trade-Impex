@@ -1,0 +1,184 @@
+{%load static%}
+{% load blog_tags%}
+
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'blog/bootstrap.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{%static 'blog/main.css'%}">
+    <link rel="shortcut icon" type="img/png" href="{%static 'blog/img/favicon.png'%}">
+
+    {% if title %}
+    <title>Best Moisture - {{title}}</title>
+    {% else %}
+    <title>Best Moisture</title>
+    {%endif%}
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand navbar-light bg-light flex-column flex-md-row bd-navbar fixed-top">
+            <div class="container">
+                    <a class="navbar-brand" style="margin-bottom: 20px;" href="/">
+                        <img src="{%static 'blog/azhar-logo.png' %}" width="90px" height="90px" alt="">
+                    </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                </div>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-item nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link" href="{%url 'blog-about'%}">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-hashpop="true" aria-expanded="false">Product</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{%url 'blog-white'%}">White Silica Gel</a>
+                            <a class="dropdown-item" href="{%url 'blog-blue'%}">Blue Silica Gel</a>
+                            <a class="dropdown-item" href="{%url 'blog-orange'%}">Orange Silica Gel</a>
+                            <a class="dropdown-item" href="{%url 'blog-silica_gel_bag'%}">Silical Gel Bag</a>
+                            <a class="dropdown-item" href="{%url 'blog-silica_gel_pouch'%}">Silica Gel Pouch</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link" href="{%url 'post'%}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link" href="{%url 'blog-FAQ'%}">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link" href="{%url 'blog-contact'%}">Contact Us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    
+    <div class="row">
+        <div class=" container col-md-9">
+            {%block content%}
+            {%endblock%}
+        </div> <br>
+        <div class=" container col-md-3">
+            {%block data%}
+                <div class="content-section">
+                    <h5 style="margin-bottom: 0px !important;"><b>LATEST POSTS</b></h5>
+                    <hr style="border-top: 3px solid #25aae1; margin-top: 0px !important;" align="left" width="50%">
+                    {% get_recent_posts as post_list%}
+                    <ul style="padding-inline-start: 0px !important;">
+                        {% for post in post_list%}
+            
+                                    <a href="{%url 'post-detail' post.id%}"><span class="recent_post">{{post.title}}</span></a>
+                            <hr style="line-height: 100%;">
+                            {% endfor %}
+                    </ul>
+                </div>
+            {%endblock%}
+        </div>
+    </div>
+    <footer class="page-footer font-small" style="background-color:black">
+        <div class="container col-md-12">
+
+            <div class="container text-center text-md-left">
+
+                <div class="row mt-3 py-4" style="padding-bottom: 0px; padding-top: 0px;">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-4" style="color: #999999;">
+
+                        <!-- Content -->
+                        <h6 class="text-uppercase font-weight-bold" style="color: #999999;">Office Address</h6>
+                        <hr style="border-top: 3px solid #25aae1;" align="left" width="60%">
+                        <p>
+                            A-4, Sai Shyam Plaza <br>
+                            Opposite Monalisa Hotel <br>
+                            Near Katrap Garden <br>
+                            Katrap Road,Badlapur East <br>
+                            Pin Code : 421503
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-3 mb-4" style="color: #999999;">
+
+                        <h6 class="text-uppercase font-weight-bold" style="color: #999999;"> Contact Details</h6>
+                        <hr style="border-top: 3px solid #25aae1;" align="left" width="60%">
+                        <p>
+                            <h6 style="color: #999999;">Azhar Trade Impex</h6>
+                            <i class="material-icons" style="font-size:12px">phone</i>+91-9890654973 <br>
+                            <i class="material-icons" style="font-size:12px">phone</i>+91-9552396473<br>
+                            <i class="material-icons" style="font-size:12px">email</i> azhark853@gmail.com<br>
+                            <i class="material-icons" style="font-size:12px">email</i> info@bestmoisture.com
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="social-media-button-container col-md-6 mb-4" style="color: #999999; text-align: right;">
+                        <h6 class="text-uppercase font-weight-bold" style="color: #999999;"> Connect with Us</h6>
+                        <hr style="border-top: 3px solid #25aae1;" align="right" width="28%" height="40%">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <!-- <a href="#" class="fa fa-facebook" style="text-align: justify;" width= "30px;"></a>
+                                    <a href="#" class="fa fa-linkedin" style="text-align: justify;" width= "30px;"></a> -->
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer style="color: #333333; background-color:whitesmoke">
+        <div class="container col-md-12" style="height:10px; margin-bottom: 0px;">
+            <p style="font-family:monospace; margin-bottom: 0px; font-size:12px;">Copyright © 2020 Best Moisture, All
+                Rights Reserved </p>
+            <ul class="nav justify-content-end" style="font-size: 12px;">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blog-about'%}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blog-contact'%}">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'django.contrib.sitemaps.views.sitemap'%}">Site Map</a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
