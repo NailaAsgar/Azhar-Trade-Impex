@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from .import views
-from .views import PostDetailView, PostListView
+from .views import PostListView, PostDetailView
 
 urlpatterns = [
     
@@ -14,7 +14,14 @@ urlpatterns = [
     path('silica_gel_bag/',views.silica_gel_bag, name = 'blog-silica_gel_bag'),
     path('silica_gel_pouch/',views.silica_gel_pouch, name = 'blog-silica_gel_pouch'),
     path('FAQ/',views.FAQ, name = 'blog-FAQ'),
-    path('post/<int:pk>/',PostDetailView.as_view(), name = 'post-detail'),
+    # path('post/<int:pk>/',views.DetailView, name = 'post-detail'),
+    # path('post/<slug:slug>/',PostDetailView.as_view(), name = 'post-detail'),
+    path('<slug:slug>', PostDetailView.as_view(), name='post_detail'),
     path('post/',PostListView.as_view(), name = 'post'),
+    
+    
+   
 
 ]
+
+#'post/<int:pk>/

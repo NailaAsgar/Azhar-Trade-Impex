@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
 from .models import Post
 from django.core.mail import send_mail
 from django.views.generic import DetailView, ListView
@@ -54,6 +54,12 @@ def b_home(request):
        }
     return render(request, 'blog1/home.html',args)
 
+# def Detailview(request):
+#     context = {
+#         'posts' : Post.objects.all()
+#     # }
+#     # return render(request, 'blog/post_detail.html' , context)
+
 class PostListView(ListView):
     model = Post
     template_name = 'blog1/home.html'
@@ -65,6 +71,7 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = Post
     template_name = 'blog/post_detail.html'
+
 
 
 

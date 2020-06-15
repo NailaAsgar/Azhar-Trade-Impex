@@ -17,11 +17,11 @@ body {
   }
 
   .carousel-item {
-    height: 350px;
+    height: 250px;
   }
   
   .carousel-item img {
-      height: 350px;
+      height: 250px;
   }
 
   .dropdown:hover>.dropdown-menu{
@@ -170,7 +170,7 @@ body {
   }
   
   .fa-linkedin {
-    color: white;
+    color:white;
   }
   
   .recent_post{
@@ -178,4 +178,5 @@ body {
     font-family: Verdana;
     font-size: 16px;
   }
+
  

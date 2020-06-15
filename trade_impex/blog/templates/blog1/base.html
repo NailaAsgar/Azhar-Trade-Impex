@@ -83,7 +83,7 @@
                     <ul style="padding-inline-start: 0px !important;">
                         {% for post in post_list%}
             
-                                    <a href="{%url 'post-detail' post.id%}"><span class="recent_post">{{post.title}}</span></a>
+                                    <a href="{%url 'post_detail' post.slug %}"><span class="recent_post">{{post.title}}</span></a>
                             <hr style="line-height: 100%;">
                             {% endfor %}
                     </ul>
@@ -128,14 +128,16 @@
 
                     </div>
                     <!-- Grid column -->
+                    <div class="col-md-3 mb-4">
 
+                    </div>
                     <!-- Grid column -->
-                    <div class="social-media-button-container col-md-6 mb-4" style="color: #999999; text-align: right;">
+                    <div class="social-media-button-container col-md-3 mb-4" style="color: #999999; text-align: left;">
                         <h6 class="text-uppercase font-weight-bold" style="color: #999999;"> Connect with Us</h6>
-                        <hr style="border-top: 3px solid #25aae1;" align="right" width="28%" height="40%">
+                        <hr style="border-top: 3px solid #25aae1;" align="left" width="60%" height="40%">
                         <a href="#" class="fa fa-facebook"></a>
                         <a href="#" class="fa fa-linkedin"></a>
-                        <a href="#" class="fa fa-linkedin"></a>
+
                         <!-- <a href="#" class="fa fa-facebook" style="text-align: justify;" width= "30px;"></a>
                                     <a href="#" class="fa fa-linkedin" style="text-align: justify;" width= "30px;"></a> -->
                     </div>

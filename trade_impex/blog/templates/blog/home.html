@@ -2,71 +2,121 @@
 {%load static%}
 
 {% block content %}
-    <div id ="carouselExampleInterval" class = "carousel-slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class = "carousel-item active" data-interval="10000">
-                <img src="{% static 'blog/carousel/image.jpg'%}" class="d-block w-100 h-70" alt="">
-            </div>
-        </div> <br> <br>
+<!-- Slider Start-->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-3">
+          <img src ="{%static 'blog/blue/image.png'%}" class ="d-block w-100">
+        </div>
+        <div class="col-3">
+          <img src ="{%static 'blog/orange/image.jpg'%}" class ="d-block w-100">
+        </div>
+        <div class="col-3">
+          <img src ="{%static 'blog/white/download.jpg'%}" class ="d-block w-100">
+        </div>
+        <div class="col-3">
+          <img src ="{%static 'blog/white/image.jpg'%}" class ="d-block w-100">
+        </div>
+      </div>
     </div>
-    <div class='container col-md-12'>
-        <p style='font-style: normal; font-size: 1rem;'>
-            Silica gel is an amorphous and porous form of silicon dioxide (silica), consisting of an irregular tridimensional framework of alternating silicon and oxygen atoms with nanometer -scale voids and pores. Silica gel which is a non-toxic and an Inert moisture absorber. 
-            Silica gel can absorb 40 percent of its weight in water vapor, provides superior absorption and keeps environment fresh, rust and fungus free.
-        </p> <br>
-        <p style='font-style: normal; font-size: 1rem;'>
-            <h3>Types of Silica Gel</h3> <br> 
-            <li style='font-style: normal; font-size: 1rem;'>Type A Silica Gel – clear pellets, approximate pore diameter: 2.5 nm, drying and moisture proof properties, can be used as catalyst carriers, adsorbents, separators and variable-pressure adsorbent.</li>   
-            <li style='font-style: normal; font-size: 1rem;'>Type B – translucent white pellets, pore diameter: 4.5⁠–⁠7.0 nm, liquid adsorbents, drier and perfume carriers, also may be used as catalyst carriers, cat litter.</li>  
-            <li style='font-style: normal; font-size: 1rem;'>Type C Silica Gel – translucent, micro-pored structure, raw material for preparation of silica gel cat litter. Additionally dried and screened, it forms macro-pored silica gel which is used as drier, adsorbent and catalyst carrier.</li>  
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-3">
+          <img src ="{%static 'blog/blue/img.png'%}" class ="d-block w-100">
+        </div>
+        <div class="col-md-3">
+          <img src ="{%static 'blog/blue/img.png'%}" class ="d-block w-100">
+        </div>
+        <div class="col-md-3">
+          <img src ="{%static 'blog/blue/image.png'%}" class ="d-block w-100">
+        </div>
+        <div class="col-md-3">
+          <img src ="{%static 'blog/blue/img.png'%}" class ="d-block w-100">
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 
-        </p>
-    </div> <br> <br>
-    <h3 style='text-align: center;'>Sector</h3>
-    <div class="container">
-        <div class = "card-deck " style= "margin-top:5%;">
-            <div class = "card" >
-                <img src="{%static 'blog/sector/auto.jpg'%}" class = "card-img-top">
-                <div class = "card-body">
-                    <h5>Silical Gel In Automobile </h5>
-                </div>
-            </div>
-            <div class = "card">
-                <img src="{%static 'blog/sector/engg.jpg'%}" class = "card-img-top">
-                <div class = "card-body">
-                    <h5>Silical Gel In Engineering</h5>
-                </div>
-            </div>
-            <div class = "card">
-                <img src="{%static 'blog/sector/FOOD.jpg'%}" class = "card-img-top">
-                <div class = "card-body">
-                    <h5>Silical Gel In Food Industry</h5>
-                </div>
+
+<!-- Slider End-->
+  
+<div class='container col-md-12'>
+    <p style='font-style: normal; font-size: 1rem;'>
+        Silica gel is an amorphous and porous form of silicon dioxide (silica), consisting of an irregular
+        tridimensional framework of alternating silicon and oxygen atoms with nanometer -scale voids and pores. Silica
+        gel which is a non-toxic and an Inert moisture absorber.
+        Silica gel can absorb 40 percent of its weight in water vapor, provides superior absorption and keeps
+        environment fresh, rust and fungus free.
+    </p> <br>
+    <p style='font-style: normal; font-size: 1rem;'>
+    <h3>Types of Silica Gel</h3> <br>
+    <li style='font-style: normal; font-size: 1rem;'>Type A Silica Gel – clear pellets, approximate pore diameter: 2.5
+        nm, drying and moisture proof properties, can be used as catalyst carriers, adsorbents, separators and
+        variable-pressure adsorbent.</li>
+    <li style='font-style: normal; font-size: 1rem;'>Type B – translucent white pellets, pore diameter: 4.5⁠–⁠7.0 nm,
+        liquid adsorbents, drier and perfume carriers, also may be used as catalyst carriers, cat litter.</li>
+    <li style='font-style: normal; font-size: 1rem;'>Type C Silica Gel – translucent, micro-pored structure, raw
+        material for preparation of silica gel cat litter. Additionally dried and screened, it forms macro-pored silica
+        gel which is used as drier, adsorbent and catalyst carrier.</li>
+
+    </p>
+</div> <br> <br>
+<h3 style='text-align: center;'>Sector</h3>
+<div class="container">
+    <div class="card-deck " style="margin-top:5%;">
+        <div class="card">
+            <img src="{%static 'blog/sector/auto.jpg'%}" class="card-img-top">
+            <div class="card-body">
+                <h5>Silical Gel In Automobile </h5>
             </div>
         </div>
-    
-        <div class = "card-deck " style= "margin-top:5%;">
-            <div class = "card" >
-                <img src="{%static 'blog/sector/log.jpg'%}" class = "card-img-top">
-                <div class = "card-body">
-                    <h5>Silical Gel In Logistics and Export</h5>
-                </div>
+        <div class="card">
+            <img src="{%static 'blog/sector/engg.jpg'%}" class="card-img-top">
+            <div class="card-body">
+                <h5>Silical Gel In Engineering</h5>
             </div>
-            <div class = "card">
-                <img src="{%static 'blog/sector/oil.jpg'%}" class = "card-img-top">
-                <div class = "card-body">
-                    <h5>Silical Gel In Oil and Gas</h5>
-                </div>
-            </div>
-            <div class = "card">
-                <img src="{%static 'blog/sector/pharma.jpg'%}" class = "card-img-top">
-                <div class = "card-body">
-                    <h5>Silical Gel In Pharma</h5>
-                </div>
+        </div>
+        <div class="card">
+            <img src="{%static 'blog/sector/FOOD.jpg'%}" class="card-img-top">
+            <div class="card-body">
+                <h5>Silical Gel In Food Industry</h5>
             </div>
         </div>
     </div>
-    
-    
-    
+
+    <div class="card-deck " style="margin-top:5%;">
+        <div class="card">
+            <img src="{%static 'blog/sector/log.jpg'%}" class="card-img-top">
+            <div class="card-body">
+                <h5>Silical Gel In Logistics and Export</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{%static 'blog/sector/oil.jpg'%}" class="card-img-top">
+            <div class="card-body">
+                <h5>Silical Gel In Oil and Gas</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{%static 'blog/sector/pharma.jpg'%}" class="card-img-top">
+            <div class="card-body">
+                <h5>Silical Gel In Pharma</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 {%endblock%}
